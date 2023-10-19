@@ -1,0 +1,378 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https: //fonts.google.com/specimen/Patua+One/about?preview.text=START&preview.text_type=custom");
+
+/* 頁首設定 */
+body {
+    margin: 0;
+}
+
+.navBG1 {
+    position: fixed;
+    background-color: rgb(32, 32, 123);
+    width: 100%;
+    height:13%;
+    z-index: 2;
+}
+
+.navBG2 {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 13%;
+    z-index: 4;
+}
+
+.navBG3 {
+    position: fixed;
+    background-color: rgb(53, 146, 78);
+    width: 100%;
+    height: 13%;
+    z-index: 6;
+}
+
+.content {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3% 5%;
+    width: 95%;
+    z-index: 8;  /* 暫時給2 之後看物件圖層而定 */
+    height: 5px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    text-shadow: 0px 0px 4px black;
+}
+
+.intro,
+.system {
+    padding: 0 10px;
+    flex:flex-end;
+    font-size: 20px;
+}
+
+.team {
+    margin-right: 50px;
+}
+
+.logo {
+    color: white;
+}
+
+/* 連結樣式設定 */
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    border-bottom: 3px solid white;
+    color:white;
+
+}
+
+a:hover {
+    text-decoration: none;
+    border-bottom: 3px solid skyblue;
+    color: skyblue;
+    text-shadow: 0 0 1px white;
+}
+
+/* 頁面架構 */
+section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+}
+/* .outer,
+.inner {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;     這區塊還沒用到
+} */
+
+/* 頁面轉場 */
+/* .page {
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+} */
+
+#first {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background: url(../images/聲波-612x612.png) no-repeat center center fixed;
+    z-index: 7;
+    /* transform: translate(0, 0); */
+}
+
+.shakeVertical {
+    -webkit-animation: shake-vertical 5s infinite;
+    animation: shake-vertical 5s infinite;
+}
+
+h2 {
+    color:white;
+    box-sizing: border-box;
+    font-size: 120px;
+    font-family: "Patua One", sans-serif;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+/* 系統介紹樣式 */
+#second {
+    position: absolute;
+    top:100%;
+    background-color: rgb(124, 176, 255);
+    z-index: 1;
+}
+
+/* 系統頁面樣式 */
+#third {
+    position: absolute;
+    top: 200%;
+    
+    z-index: 3;
+
+    /* transform: translate(0, 100%); */
+    /* animation: move 3s linear initial alternate; */
+    /* 順序如下
+    1. animation-name 
+    2. animation-duration 
+    3. animation-iteration-count 
+    (延後時長 animation-delay) 
+    4. animation-direction  
+    5. animation-timing-function */
+} 
+
+/* 對比圖 */
+.image-container {
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:70%;
+    height:70%;
+    max-width:70%;
+    max-height:70%;
+    margin-bottom: 4%;
+    padding: 0;
+    z-index: 5;
+    overflow: hidden;
+}
+
+#sliderButton {
+    size: 30px;
+    padding: 30px 10px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    /* box-shadow: -1px -1px 1px lightblue; */
+    /* left: calc(50% - 50px);
+    top: calc(50% - 0px); */
+}
+#sliderButton:hover {
+    background-color:rgb(31, 31, 31);
+    color:white;
+}
+/* 
+#sliderButton:after,
+#sliderButton:before {
+    content: '';
+    padding: 3px;
+    display: inline-block;
+    border: solid #5D5D5D;
+    border-width: 0 2px 2px 0;
+    // transform: rotate(-45deg); 
+} */
+
+/* #slider {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: slider-horizontal;
+    width: 70%;
+    height: 50%;
+    background: rgba(#f2f2f2, .3);
+    outline: none;
+    margin: 0;
+    transition: all .2s;
+    //cursor: pointer;
+} */
+
+/* #slider :hover {
+    background-color: rgba(#f2f2f2, .1);
+}
+
+#slider ::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6px;
+    height: 600px;
+    background: white;
+    cursor: pointer;
+}
+
+#slider ::-moz-range-thumb {
+    width: 6px;
+    height: 600px;
+    background: white;
+    cursor: pointer;
+} */
+
+#backgroundImg {
+    /* background-image: url("../瑕疵完成/img/exp1_num_3667.jpg") ; */
+    background-size: contain;
+    background-position: center;
+    max-width: 200%;
+    max-height:200%;
+    border: 2px solid white;
+    border-right: 1px solid white;
+}
+
+#foregroundImg {
+    /* background-image: url("../瑕疵完成/mask/exp1_num_3667.png") ; */
+    background-size: contain;
+    background-position: center;
+    max-width:200%;
+    max-height:200%;
+    border: 2px solid white;
+    border-left: 1px solid white;
+}
+
+#fourth {
+    position: absolute;
+    top: 300%;
+    background-color: rgb(87, 189, 114);
+    z-index: 5;
+}
+
+/* 動畫樣式 */
+/* ----------------------------------------------
+* Generated by Animista on 2023-10-11 2:42:35
+* Licensed under FreeBSD License.
+* See http://animista.net/license for more info. 
+* w: http://animista.net, t: @cssanimista
+* ---------------------------------------------- */
+
+@-webkit-keyframes shake-vertical {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px)
+    }
+
+    80% {
+        -webkit-transform: translateY(6.4px);
+        transform: translateY(6.4px)
+    }
+
+    90% {
+        -webkit-transform: translateY(-6.4px);
+        transform: translateY(-6.4px)
+    }
+}
+
+@keyframes shake-vertical {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px)
+    }
+
+    80% {
+        -webkit-transform: translateY(6.4px);
+        transform: translateY(6.4px)
+    }
+
+    90% {
+        -webkit-transform: translateY(-6.4px);
+        transform: translateY(-6.4px)
+    }
+}
+
+/* @-webkit-keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: translateY(-100px);
+        transform: translateY(-100px);
+        opacity: 0
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: translateY(-100px);
+        transform: translateY(-100px);
+        opacity: 0
+    }
+}
+/* 動畫初始樣式 */
+/* .element {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+/* 應用動畫到元素 */
+/* .element {
+    animation: slide-top 5s infinite 5s alternate-reverse linear;
+    background:none;
+} */
