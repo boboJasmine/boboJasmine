@@ -260,12 +260,12 @@ section {
 }
 
 #nextButton {  /* 比賽新增的按鈕 */
-    size: 30px;
-    padding: 10px 37px;
+    size: var(--spacing-xl);
+    padding: 12px 37px;
     /* 原版 padding: 30px 10px; */
     position: absolute;
     right: 35%;
-    bottom: 5%;
+    bottom: 7%;
     /* 比賽時新增的 */
     border-radius: 20px;
     /* 原版 border-radius: 50%; */
@@ -275,12 +275,12 @@ section {
 }
 
 #run {  /* 比賽新增的按鈕 */
-    size: 30px;
-    padding: 10px 15px;
+    size: var(--spacing-xl);
+    padding: 12px 15px;
     /* 原版 padding: 30px 10px; */
     position: absolute;
-    right:47%;
-    bottom: 5%;
+    right:50%;
+    bottom: 7%;
     /* 比賽時新增的 */
     border-radius: 20px;
     /* 原版 border-radius: 50%; */
@@ -290,11 +290,11 @@ section {
 }
 
 #sliderButton {
-    size: 30px;
-    padding: 10px 15px;   /* 原版 padding: 30px 10px; */
+    size: var(--spacing-xl);
+    padding: 12px 15px;   /* 原版 padding: 30px 10px; */
     position: absolute;
     left:35%;    /* 比賽時新增的 */
-    bottom: 5%;   /* 比賽時新增的 */
+    bottom: 7%;   /* 比賽時新增的 */
     border-radius: 20px;  /* 原版 border-radius: 50%; */
     background-color: white;
     font-weight: bold;
