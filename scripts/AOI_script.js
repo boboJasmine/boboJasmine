@@ -326,5 +326,3 @@ window.addEventListener('scroll', () => {
         navbar.style.backgroundColor = '#ffffff00';
     }
 });
-
-//------------------------------失敗---------------------------------
