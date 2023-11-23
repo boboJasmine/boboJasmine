@@ -305,5 +305,26 @@ changeImage.addEventListener("click", () => {
 // }
 
 // // 滾動時檢查位置
-// window.addEventListener("scroll", checkObjectPosition);
+const navbar = document.querySelector('.navBG');
+
+//監看頁面滾動進度
+window.addEventListener('scroll', () => {
+    // 計算百分比
+    const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+    if (scrollPercentage >= 25 && scrollPercentage < 60) {
+        // 滾動到25% - 50%時，更改背景顏色為藍色
+        navbar.style.backgroundColor = '#20207b';
+    } else if (scrollPercentage >= 60 && scrollPercentage < 90) {
+        // 滾動到50% - 75%時，更改背景顏色為黑色
+        navbar.style.backgroundColor = 'black';
+    } else if (scrollPercentage >= 90) {
+        // 滾動到75%及以上時，更改背景顏色為綠色
+        navbar.style.backgroundColor = '#35924e';
+    } else {
+        // 恢復默認背景顏色
+        navbar.style.backgroundColor = '#ffffff00';
+    }
+});
+
 //------------------------------失敗---------------------------------
