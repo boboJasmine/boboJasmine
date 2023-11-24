@@ -244,7 +244,7 @@ section {
 } 
 
 /* 對比圖 */
-.image-container {
+/* .image-container {
     /* background-color: blueviolet; */
     display: flex;
     justify-content: center;
@@ -258,8 +258,8 @@ section {
     z-index: 5;
     overflow: hidden;
 }
-
-#sliderButton {
+ */
+/* #sliderButton {
     size: 30px;
     padding: 30px 10px;
     position: absolute;
@@ -274,7 +274,73 @@ section {
 #sliderButton:hover {
     background-color:rgb(31, 31, 31);
     color:white;
+} */
+
+.image_container {
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 70%;
+    max-width: 90%;
+    max-height: 70%;
+    margin-bottom: 4%;
+    padding: 0;
+    z-index: 5;
+    overflow: hidden;
 }
+
+#nextButton {  /* 比賽新增的按鈕 */
+    size: var(--spacing-xl);
+    padding: 12px 37px;
+    /* 原版 padding: 30px 10px; */
+    position: absolute;
+    right: 35%;
+    bottom: 7%;
+    /* 比賽時新增的 */
+    border-radius: 20px;
+    /* 原版 border-radius: 50%; */
+    background-color: white;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#run {  /* 比賽新增的按鈕 */
+    size: var(--spacing-xl);
+    padding: 12px 15px;
+    /* 原版 padding: 30px 10px; */
+    position: absolute;
+    right:47.5%;
+    bottom: 7%;
+    /* 比賽時新增的 */
+    border-radius: 20px;
+    /* 原版 border-radius: 50%; */
+    background-color: white;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#sliderButton {
+    size: var(--spacing-xl);
+    padding: 12px 15px;   /* 原版 padding: 30px 10px; */
+    position: absolute;
+    left:35%;    /* 比賽時新增的 */
+    bottom: 7%;   /* 比賽時新增的 */
+    border-radius: 20px;  /* 原版 border-radius: 50%; */
+    background-color: white;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#sliderButton:hover ,
+#run:hover,
+#nextButton:hover {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    cursor: pointer; 
+}
+
 /* 
 #sliderButton:after,
 #sliderButton:before {
@@ -319,7 +385,7 @@ section {
     cursor: pointer;
 } */
 
-#backgroundImg {
+/* #backgroundImg {
     /* background-image: url("../瑕疵完成/img/exp1_num_3667.jpg") ; */
     background-size: contain;
     background-position: center;
@@ -337,6 +403,17 @@ section {
     max-height:200%;
     border: 2px solid white;
     border-left: 1px solid white;
+} */
+
+#backgroundImg,
+#foregroundImg {
+    background-size: contain;
+    background-position: center;
+    max-width: 100%;
+    max-height: 100%;
+    /* border: 2px solid white;
+    border-right: 1px solid white; */
+    transition: opacity 0.5s;  /* 比賽用的動畫 */
 }
 
 #fourth {
