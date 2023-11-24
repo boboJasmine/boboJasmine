@@ -186,6 +186,20 @@ const dotWaveAnimation = document.querySelector(".change_animation");
 const next = document.getElementById("nextButton");
 
 imageAnimation.addEventListener("click", () => {
+        if (currentIndex1 = 0) {
+        const newImageName1 = imageNames1[currentIndex1];
+        const newImageName2 = imageNames2[currentIndex2];
+    
+        const newImageUrl1 = folder1 + newImageName1;
+        const newImageUrl2 = folder2 + newImageName2;
+    
+        image1.src = newImageUrl1;
+        image1.alt = "Image " + (currentIndex1 + 1);
+    
+        image2.src = newImageUrl2;
+        image2.alt = "Image " + (currentIndex2 + 1);
+    }
+    
     if (currentIndex1 = currentIndex2) {
         beginingAnimation = true;
     }
