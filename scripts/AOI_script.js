@@ -194,7 +194,7 @@ imageAnimation.addEventListener("click", () => {
     if (isForegroundImageVisible) {
         // 切換到動畫
         // image1.style.opacity = "0"; // 圖片1逐漸透明
-        dotWaveAnimation.style.opacity = "1";
+        // dotWaveAnimation.style.opacity = "1";
 
         setTimeout(function () {
             dotWaveAnimation.style.display = "flex"; // 動畫逐漸顯示
