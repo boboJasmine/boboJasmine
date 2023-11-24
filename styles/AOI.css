@@ -385,32 +385,29 @@ section {
     cursor: pointer;
 } */
 
-/* #backgroundImg {
-    /* background-image: url("../瑕疵完成/img/exp1_num_3667.jpg") ; */
+/* #backgroundImg { 
     background-size: contain;
     background-position: center;
     max-width: 200%;
     max-height:200%;
     border: 2px solid white;
     border-right: 1px solid white;
-}
+} */
 
-#foregroundImg {
-    /* background-image: url("../瑕疵完成/mask/exp1_num_3667.png") ; */
+/* #foregroundImg { 
     background-size: contain;
     background-position: center;
     max-width:200%;
     max-height:200%;
     border: 2px solid white;
     border-left: 1px solid white;
-} */
-
+}
+ */
 #backgroundImg,
 #foregroundImg {
     background-size: contain;
     background-position: center;
-    height:130%;
-    width:130%;
+    height:500px;
     max-width: 100%;
     max-height: 100%;
     /* border: 2px solid white;
