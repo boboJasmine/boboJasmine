@@ -306,6 +306,7 @@ section {
 #nextButton:hover {
     background-color: rgb(31, 31, 31);
     color: white;
+    cursor: pointer; 
 }
 
 #backgroundImg,
