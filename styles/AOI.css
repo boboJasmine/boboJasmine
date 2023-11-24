@@ -251,8 +251,8 @@ section {
     align-items: center;
     width:70%;
     height:70%;
-    max-width:70%;
-    max-height:70%;
+    max-width:90%;
+    max-height:80%;
     margin-bottom: 4%;
     padding: 0;
     z-index: 5;
