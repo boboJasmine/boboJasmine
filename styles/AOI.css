@@ -407,9 +407,9 @@ section {
 #foregroundImg {
     background-size: contain;
     background-position: center;
-    height:500px;
+    height:200%;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 500px;
     /* border: 2px solid white;
     border-right: 1px solid white; */
     transition: opacity 0.5s;  /* 比賽用的動畫 */
