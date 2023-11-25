@@ -398,23 +398,35 @@ let oldIndex1 = -1;
 const folder1 = "./牙齒/train/images/"; 
 const folder2 = "./牙齒/train/masks/";
 
-//-------------------比賽用-點擊動畫---------------------------
-let isForegroundImageVisible; // 先顯示的圖
+let beginingAnimation; // 先顯示的圖
 const imageAnimation = document.getElementById("run");
 const dotWaveAnimation = document.querySelector(".change_animation");
 // const delayInMilliseconds = 3000;
 const next = document.getElementById("nextButton");
 
-imageAnimation.addEventListener("click", () => {
-    if ((currentIndex1 - oldIndex1) == 1) {
-        isForegroundImageVisible = true;
-        oldIndex1 = (oldIndex1 + 1) % imageNames1.length;
+imageAnimation.addEventListener("click", () => {    
+    if (currentIndex1 = currentIndex2) {
+        beginingAnimation = true;
     }
 
-    if (isForegroundImageVisible) {
+    if (currentIndex1 = 0) {
+        const newImageName1 = imageNames1[currentIndex1];
+        const newImageName2 = imageNames2[currentIndex2];
+    
+        const newImageUrl1 = folder1 + newImageName1;
+        const newImageUrl2 = folder2 + newImageName2;
+    
+        image1.src = newImageUrl1;
+        image1.alt = "Image " + (currentIndex1 + 1);
+    
+        image2.src = newImageUrl2;
+        image2.alt = "Image " + (currentIndex2 + 1);
+    }
+
+    if (beginingAnimation) {
         // 切換到動畫
         // image1.style.opacity = "0"; // 圖片1逐漸透明
-        dotWaveAnimation.style.opacity = "1";
+        // dotWaveAnimation.style.opacity = "1";
 
         setTimeout(function () {
             dotWaveAnimation.style.display = "flex"; // 動畫逐漸顯示
@@ -425,9 +437,9 @@ imageAnimation.addEventListener("click", () => {
             dotWaveAnimation.style.display = "none"; // 隐藏元素
             image2.style.display = "flex";
         }, 3000);
-    }
 
-    isForegroundImageVisible = false; // 切换图片显示状态
+        beginingAnimation = false; // 切换圖片顯示狀態
+    }
 });
 
 changeImage.addEventListener("click", () => {
@@ -436,51 +448,11 @@ changeImage.addEventListener("click", () => {
     image1.style.display = "flex";/* 比賽時新增的 */
     image1.style.opacity = "1"; /* 比賽時新增的 */
     
-    if ((currentIndex1 - oldIndex1) < 1) {
-        oldIndex1 = (oldIndex1 - 2) % imageNames1.length;
-        currentIndex1 = (currentIndex1 - 1) % imageNames1.length;
-        currentIndex2 = (currentIndex2 - 1) % imageNames2.length;
-
-        if (oldIndex1 < -1) {
-            oldIndex1 = (oldIndex1 + 1) % imageNames1.length;  
-        }
-
-        if (currentIndex1 < 0) {
-            currentIndex1 = (currentIndex1 + 1) % imageNames1.length;
-            currentIndex2 = (currentIndex2 + 1) % imageNames2.length;
-        }
-
-    } 
     
-    if ((currentIndex1 >= 0) && (oldIndex1 >= -1)) {
-        currentIndex1 = (currentIndex1 - 1) % imageNames1.length;
-        currentIndex2 = (currentIndex2 - 1) % imageNames2.length;
-        oldIndex1 = (oldIndex1 - 1) % imageNames1.length; 
-
-        if (currentIndex1 < 0) {
-            currentIndex1 = (currentIndex1 + 1) % imageNames1.length;
-            currentIndex2 = (currentIndex2 + 1) % imageNames2.length;
-        }
-
-    } 
-    
-    if ((currentIndex1 < 0) || (oldIndex1 < -1)) {
+    if ((currentIndex1 < 0)) {
         currentIndex1 = 0;
         currentIndex2 = 0;
-        oldIndex1 = -1;
     }
-
-    const newImageName1 = imageNames1[currentIndex1];
-    const newImageName2 = imageNames2[currentIndex2];
-
-    const newImageUrl1 = folder1 + newImageName1;
-    const newImageUrl2 = folder2 + newImageName2;
-
-    image1.src = newImageUrl1;
-    image1.alt = "Image " + (currentIndex1 - 1);
-
-    image2.src = newImageUrl2;
-    image2.alt = "Image " + (currentIndex2 - 1);
 })
 
 next.addEventListener("click", () => {
@@ -488,10 +460,6 @@ next.addEventListener("click", () => {
     image2.style.display = "none";
     image1.style.display = "flex";/* 比賽時新增的 */
     image1.style.opacity = "1"; /* 比賽時新增的 */
-
-    if ((currentIndex1 - oldIndex1) >= 1) {
-        oldIndex1 = (oldIndex1 + 1) % imageNames1.length;
-    }
 
     currentIndex1 = (currentIndex1 + 1) % imageNames1.length;
     currentIndex2 = (currentIndex2 + 1) % imageNames2.length;
@@ -508,6 +476,118 @@ next.addEventListener("click", () => {
     image2.src = newImageUrl2;
     image2.alt = "Image " + (currentIndex2 + 1);
 })
+
+
+//-------------------比賽用-點擊動畫---------------------------
+// let isForegroundImageVisible; // 先顯示的圖
+// const imageAnimation = document.getElementById("run");
+// const dotWaveAnimation = document.querySelector(".change_animation");
+// // const delayInMilliseconds = 3000;
+// const next = document.getElementById("nextButton");
+
+// imageAnimation.addEventListener("click", () => {
+//     if ((currentIndex1 - oldIndex1) == 1) {
+//         isForegroundImageVisible = true;
+//         oldIndex1 = (oldIndex1 + 1) % imageNames1.length;
+//     }
+
+//     if (isForegroundImageVisible) {
+//         // 切換到動畫
+//         // image1.style.opacity = "0"; // 圖片1逐漸透明
+//         dotWaveAnimation.style.opacity = "1";
+
+//         setTimeout(function () {
+//             dotWaveAnimation.style.display = "flex"; // 動畫逐漸顯示
+//             image1.style.display = "none";
+//         }, 500);
+
+//         setTimeout(function () {
+//             dotWaveAnimation.style.display = "none"; // 隐藏元素
+//             image2.style.display = "flex";
+//         }, 3000);
+//     }
+
+//     isForegroundImageVisible = false; // 切换图片显示状态
+// });
+
+// changeImage.addEventListener("click", () => {
+//     dotWaveAnimation.style.display = "none";
+//     image2.style.display = "none";
+//     image1.style.display = "flex";/* 比賽時新增的 */
+//     image1.style.opacity = "1"; /* 比賽時新增的 */
+    
+//     if ((currentIndex1 - oldIndex1) < 1) {
+//         oldIndex1 = (oldIndex1 - 2) % imageNames1.length;
+//         currentIndex1 = (currentIndex1 - 1) % imageNames1.length;
+//         currentIndex2 = (currentIndex2 - 1) % imageNames2.length;
+
+//         if (oldIndex1 < -1) {
+//             oldIndex1 = (oldIndex1 + 1) % imageNames1.length;  
+//         }
+
+//         if (currentIndex1 < 0) {
+//             currentIndex1 = (currentIndex1 + 1) % imageNames1.length;
+//             currentIndex2 = (currentIndex2 + 1) % imageNames2.length;
+//         }
+
+//     } 
+    
+//     if ((currentIndex1 >= 0) && (oldIndex1 >= -1)) {
+//         currentIndex1 = (currentIndex1 - 1) % imageNames1.length;
+//         currentIndex2 = (currentIndex2 - 1) % imageNames2.length;
+//         oldIndex1 = (oldIndex1 - 1) % imageNames1.length; 
+
+//         if (currentIndex1 < 0) {
+//             currentIndex1 = (currentIndex1 + 1) % imageNames1.length;
+//             currentIndex2 = (currentIndex2 + 1) % imageNames2.length;
+//         }
+
+//     } 
+    
+//     if ((currentIndex1 < 0) || (oldIndex1 < -1)) {
+//         currentIndex1 = 0;
+//         currentIndex2 = 0;
+//         oldIndex1 = -1;
+//     }
+
+//     const newImageName1 = imageNames1[currentIndex1];
+//     const newImageName2 = imageNames2[currentIndex2];
+
+//     const newImageUrl1 = folder1 + newImageName1;
+//     const newImageUrl2 = folder2 + newImageName2;
+
+//     image1.src = newImageUrl1;
+//     image1.alt = "Image " + (currentIndex1 - 1);
+
+//     image2.src = newImageUrl2;
+//     image2.alt = "Image " + (currentIndex2 - 1);
+// })
+
+// next.addEventListener("click", () => {
+//     dotWaveAnimation.style.display = "none";
+//     image2.style.display = "none";
+//     image1.style.display = "flex";/* 比賽時新增的 */
+//     image1.style.opacity = "1"; /* 比賽時新增的 */
+
+//     if ((currentIndex1 - oldIndex1) >= 1) {
+//         oldIndex1 = (oldIndex1 + 1) % imageNames1.length;
+//     }
+
+//     currentIndex1 = (currentIndex1 + 1) % imageNames1.length;
+//     currentIndex2 = (currentIndex2 + 1) % imageNames2.length;
+
+//     const newImageName1 = imageNames1[currentIndex1];
+//     const newImageName2 = imageNames2[currentIndex2];
+
+//     const newImageUrl1 = folder1 + newImageName1;
+//     const newImageUrl2 = folder2 + newImageName2;
+
+//     image1.src = newImageUrl1;
+//     image1.alt = "Image " + (currentIndex1 + 1);
+
+//     image2.src = newImageUrl2;
+//     image2.alt = "Image " + (currentIndex2 + 1);
+// })
 
 //-------------------專題用-比較圖---------------------------
 // 按鈕點擊處理程序
@@ -530,8 +610,6 @@ next.addEventListener("click", () => {
 //     image2.alt = "Image " + (currentIndex2 + 1);
     
 // })
-
-// ----------------------members--------------------------
 
 // ---------------------file catch------------------------------
 // 獲取檔案夾中的所有圖片名稱
