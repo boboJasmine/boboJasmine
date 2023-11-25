@@ -144,17 +144,6 @@ let imageNames2 = ["exp1_num_3667.png", "exp1_num_4727.png", "exp1_num_4944.png"
 let currentIndex1 = 0;
 let currentIndex2 = 0;
 // let oldIndex1 = -1;
-const newImageName1 = imageNames1[currentIndex1];
-const newImageName2 = imageNames2[currentIndex2];
-
-const newImageUrl1 = folder1 + newImageName1;
-const newImageUrl2 = folder2 + newImageName2;
-
-image1.src = newImageUrl1;
-image1.alt = "Image " + (currentIndex1 + 1);
-
-image2.src = newImageUrl2;
-image2.alt = "Image " + (currentIndex2 + 1);
 
 // 圖片相對路徑
 // const file1 = "../瑕疵完成/img/img.txt";
