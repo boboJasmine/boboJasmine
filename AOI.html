@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>工業瑕疵檢測系統</title>   <!-- 備註英文:Industrial Defect Detection System -->
   <link rel="icon" href="./icon/aoi.ico" type="image/x-icon">
-<!--   <link type="text/css" href="./styles/AOI.css" rel="stylesheet" media="all"> -->
-  <link type="text/css" href="./styles/medic.css" rel="stylesheet" media="all">
-  
+  <link type="text/css" href="./styles/AOI.css" rel="stylesheet" media="all">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
 <body>
   <section id="first">
     <div class="navBG">
       <div class="logo">Industrial Defect Detection System</div>
-      <div><a class="system intro_nav" href="#second">Introduction</a>
+      <div><a class="system_intro_nav" href="#second">Introduction</a>
         <a class="system_nav" href="#third">Result</a>
-        <a class="team intro_nav" href="#fourth">Members</a>
+        <a class="team_intro_nav" href="#fourth">Members</a>
       </div>
     </div>
-    
+
     <div class="shakeVertical">
       <div class="scroll">
         <h2 class="start">START<br>︾</h2>
@@ -25,7 +26,7 @@
     </div>
   </section>
 
-  <section id="second" >
+  <section id="second">
     <svg class="circle1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1500 1500">
       <defs>
         <filter id="goo">
@@ -47,12 +48,13 @@
     <div class="wave wave-1"></div>
     <div class="wave wave-2"></div>
     <div class="wave wave-3"></div>
-    
+  
     <div class="system_intro">
       <div class="intro_content">
         <p class="intro">我們將TransUnet和Unet的模型經過訓練後，<br>會顯示其績效分別為<br>
           Unet：<br><span>loss：0.9312　test loss：0.7382　Accuracy：0.6309　Recall：0.64　Precision：0.5333　F1 score：0.5</span><br>
-          TransUnet：<br><span>loss：0.0515　test loss：0.0909　Accuracy：0.95　Recall：0.95　Precision：0.9473　F1 score：0.923</span><br>
+          TransUnet：<br><span>loss：0.0515　test loss：0.0909　Accuracy：0.95　Recall：0.95　Precision：0.9473　F1
+            score：0.923</span><br>
           上述可知TransUnet模型的準確度高於Unet模型，因此系統將運用先進的影像切割技術TransUnet模型來提升醫療影像辨識的準確度，進一步支援診療流程。
         </p>
       </div>
@@ -63,9 +65,13 @@
     </div>
   </section>
 
-   <section id="third">
-    <div class="image_container">
-      <img id="foregroundImg" src="./瑕疵完成/img/exp1_num_3667.jpg" alt="Image 1">  <!-- 要連接資料庫 -->
+<section id="third">
+  <div class="imageContainer">
+    <!-- <h3 class="directions">請上傳圖片<br>上傳 => SUBMIT => DOWNLOAD</h3> -->
+    <form class="form" action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="fileToUpload" id="fileToUpload">
+
+      <div id="backgroundImg" alt="Preview"> </div> <!-- 要連接資料庫 -->
       <!-- <input type="range" id="slider" min="0" max="100" value="50"> -->
       <section class="change_animation">
         <div class="loader" style="--r:1;">
@@ -157,30 +163,24 @@
           <span style="--i:20;"></span>
         </div>
       </section>
-      <img id="backgroundImg" src="./瑕疵完成/mask/exp1_num_3667.png" alt="Image 2">  <!-- 要連接資料庫 -->
-      <br>
-      <button id="sliderButton">TRY AGAIN</button>
-      <button id="run">RUN</button>
-      <button id="nextButton">NEXT</button>
-      <!-- 原版文字: 切換圖像 -->
-    </div>
-  </section>
-<!--   <section id="third">
-    <div class="image-container">
-      <img id="backgroundImg" src="./瑕疵完成/img/exp1_num_3667.jpg" alt="Image 1"> <!-- 要連接資料庫 -->
-      <!-- <input type="range" id="slider" min="0" max="100" value="50"> -->
       <img id="foregroundImg" src="./瑕疵完成/mask/exp1_num_3667.png" alt="Image 2"> <!-- 要連接資料庫 -->
-      <br>
-      <button id="sliderButton">切換圖像</button>
-
-    </div>
-  </section> -->
+      <div id="buttons">
+        <input type="submit" value="SUBMIT" id="submit" onclick="startAnimation()"><br>
+        <button id="download" onclick="downloadImage()">DOWNLOAD</button>
+      </div>
+    </form>
+    <!-- 以下為比賽用 button -->
+    <!-- <button id="sliderButton">TRY AGAIN</button>
+      <button id="run">RUN</button>
+      <button id="nextButton">NEXT</button> -->
+    <!-- 原版文字: 切換圖像 -->
+  </div>
+</section>
 
   <section id="fourth">
     <div class="card_grid">
       <a class="card" href="#">
-        <div class="card_background"
-          style="background-image: url(./images/林子益.jpg)">
+        <div class="card_background" style="background-image: url(./images/林子益.jpg)">
         </div>
         <div class="card_content">
           <p class="card_category">隊長</p>
@@ -188,8 +188,7 @@
         </div>
       </a>
       <a class="card" href="#">
-        <div class="card_background"
-          style="background-image: url(./images/羅詠潔.jpg)">
+        <div class="card_background" style="background-image: url(./images/羅詠潔.jpg)">
         </div>
         <div class="card_content">
           <p class="card_category">隊員</p>
@@ -197,8 +196,7 @@
         </div>
       </a>
       <a class="card" href="#">
-        <div class="card_background"
-          style="background-image: url(./images/張庭碩.jpg)">
+        <div class="card_background" style="background-image: url(./images/張庭碩.jpg)">
         </div>
         <div class="card_content">
           <p class="card_category">隊員</p>
@@ -206,8 +204,7 @@
         </div>
       </a>
       <a class="card" href="#">
-        <div class="card_background"
-          style="background-image: url(./images/陳虹希.jpg)">
+        <div class="card_background" style="background-image: url(./images/陳虹希.jpg)">
         </div>
         <div class="card_content">
           <p class="card_category">隊員</p>
@@ -215,16 +212,15 @@
         </div>
       </a>
       <a class="card" href="#">
-        <div class="card_background"
-          style="background-image: url(./images/彭郁惠.jpg)">
+        <div class="card_background" style="background-image: url(./images/彭郁惠.jpg)">
         </div>
         <div class="card_content">
           <p class="card_category">隊員</p>
           <h3 class="card_heading">彭郁惠</h3>
         </div>
       </a>
-    <div>
+      <div>
   </section>
 </body>
 
-<script src="./scripts/AOI_script.js"></script>
+<script type="text/script" src="./scripts/AOI_script.js"></script>
