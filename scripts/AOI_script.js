@@ -141,6 +141,29 @@ let imageNames2 = ["exp1_num_3667.png", "exp1_num_4727.png", "exp1_num_4944.png"
                     "exp6_num_291134.png", "exp6_num_297601.png", "exp6_num_308130.png", "exp6_num_317592.png",
                     "exp6_num_322697.png", "exp6_num_328105.png", "exp6_num_346414.png"];  //接收圖片陣列
 
+// 滾動時檢查位置
+const navbar = document.querySelector('.navBG');
+
+//監看頁面滾動進度
+window.addEventListener('scroll', () => {
+    // 計算百分比
+    const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+    if (scrollPercentage >= 25 && scrollPercentage < 60) {
+        // 滾動到25% - 50%時，更改背景顏色為藍色
+        navbar.style.backgroundColor = '#20207b';
+    } else if (scrollPercentage >= 60 && scrollPercentage < 90) {
+        // 滾動到50% - 75%時，更改背景顏色為黑色
+        navbar.style.backgroundColor = 'black';
+    } else if (scrollPercentage >= 90) {
+        // 滾動到75%及以上時，更改背景顏色為綠色
+        navbar.style.backgroundColor = '#35924e';
+    } else {
+        // 恢復默認背景顏色
+        navbar.style.backgroundColor = '#ffffff00';
+    }
+});
+
 let currentIndex1 = 0;
 let currentIndex2 = 0;
 // let oldIndex1 = -1;
@@ -479,26 +502,3 @@ next.addEventListener("click", () => {
 //         nextElement.classList.add("first");
 //     }
 // }
-
-// // 滾動時檢查位置
-const navbar = document.querySelector('.navBG');
-
-//監看頁面滾動進度
-window.addEventListener('scroll', () => {
-    // 計算百分比
-    const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-
-    if (scrollPercentage >= 25 && scrollPercentage < 60) {
-        // 滾動到25% - 50%時，更改背景顏色為藍色
-        navbar.style.backgroundColor = '#20207b';
-    } else if (scrollPercentage >= 60 && scrollPercentage < 90) {
-        // 滾動到50% - 75%時，更改背景顏色為黑色
-        navbar.style.backgroundColor = 'black';
-    } else if (scrollPercentage >= 90) {
-        // 滾動到75%及以上時，更改背景顏色為綠色
-        navbar.style.backgroundColor = '#35924e';
-    } else {
-        // 恢復默認背景顏色
-        navbar.style.backgroundColor = '#ffffff00';
-    }
-});
