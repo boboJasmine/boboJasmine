@@ -1,6 +1,6 @@
 const changeImage = document.getElementById("sliderButton");
-const image1 = document.getElementById("backgroundImg");
-const image2 = document.getElementById("foregroundImg");
+const image1 = document.getElementById("foregroundImg");
+const image2 = document.getElementById("backgroundImg");
 
 let imageNames1 = ["exp1_num_3667.jpg", "exp1_num_4727.jpg", "exp1_num_4944.jpg", "exp1_num_6984.jpg",
     "exp1_num_9473.jpg", "exp1_num_36290.jpg", "exp1_num_40410.jpg", "exp1_num_51674.jpg",
