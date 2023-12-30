@@ -385,14 +385,15 @@ section {
     cursor: pointer;
 } */
 
-/* #backgroundImg { 
-    background-size: contain;
+#backgroundImg { 
+/*     background-size: contain;
     background-position: center;
     max-width: 200%;
     max-height:200%;
     border: 2px solid white;
-    border-right: 1px solid white;
-} */
+    border-right: 1px solid white; */
+    display: none;
+}
 
 /* #foregroundImg { 
     background-size: contain;
