@@ -1,1 +1,218 @@
+<!DOCTYPE html>
+  <html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工業瑕疵檢測系統</title>   <!-- 備註英文:Industrial Defect Detection System -->
+  <link rel="icon" href="./icon/aoi.ico" type="image/x-icon">
+  <link type="text/css" href="./styles/medic.css" rel="stylesheet" media="all">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section id="first">
+    <div class="navBG">
+      <div class="logo">Industrial Defect Detection System</div>
+      <div><a class="system_intro_nav" href="#second">Introduction</a>
+        <a class="system_nav" href="#third">Result</a>
+        <a class="team_intro_nav" href="#fourth">Members</a>
+      </div>
+    </div>
+
+    <div class="shakeVertical">
+      <div class="scroll">
+        <h2 class="start">START<br>︾</h2>
+      </div>
+    </div>
+  </section>
+
+  <section id="second">
+    <svg class="circle1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1500 1500">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0 -16" result="goo" />
+          <feTurbulence baseFrequency="0.05" numOctaves="1" />
+          <feDisplacementMap id="displacement" in="blur" scale="20" xChannelSelector="B" yChannelSelector="G" />
+          <feBlend id="blend-mode" in="goo" mode="exclusion" />
+        </filter>
+      </defs>
+      <circle r="40%" cx="50%" cy="50%" filter="url(#goo)" stroke="#fff" stroke-width="20" fill="none">
+        <animate attributeName="r" values="0%; 100%" dur="7s" begin="0s" repeatCount="indefinite" />
+        <animate attributeName="fill"
+          values="rgba(255,255,255,0.5); rgba(255,255,255,0); rgba(255,255,255,0); rgba(255,255,255,0); rgba(255,255,255,0); rgba(255,255,255,0); rgba(255,255,255,0); rgba(255,255,255,0)"
+          dur="7s" begin="0s" repeatCount="indefinite" />
+        <animate attributeName="stroke-width" values="0;20;20" dur="7s" begin="0s" repeatCount="indefinite" />
+      </circle>
+    </svg>
+    <div class="wave wave-1"></div>
+    <div class="wave wave-2"></div>
+    <div class="wave wave-3"></div>
+  
+    <div class="system_intro">
+      <div class="intro_content">
+        <p class="intro">我們將TransUnet和Unet的模型經過訓練後，<br>會顯示其績效分別為<br>
+          Unet：<br><span>loss：0.9312　test loss：0.7382　Accuracy：0.6309　Recall：0.64　Precision：0.5333　F1 score：0.5</span><br>
+          TransUnet：<br><span>loss：0.0515　test loss：0.0909　Accuracy：0.95　Recall：0.95　Precision：0.9473　F1
+            score：0.923</span><br>
+          上述可知TransUnet模型的準確度高於Unet模型，因此系統將運用先進的影像切割技術TransUnet模型來提升醫療影像辨識的準確度，進一步支援診療流程。
+        </p>
+      </div>
+      <div class="operation_mode_box">
+        <h3 class="operation_mode">運作模式</h3>
+        <div class="analysis" style="background-image: url(./images/運作模式.jpg);"></div>
+      </div>
+    </div>
+  </section>
+
+<section id="third">
+    <div class="image_container">
+      <img id="foregroundImg" src="./瑕疵完成/img/exp1_num_3667.jpg" alt="Image 1">  <!-- 要連接資料庫 -->
+      <!-- <input type="range" id="slider" min="0" max="100" value="50"> -->
+      <section class="change_animation">
+        <div class="loader" style="--r:1;">
+          <span style="--i:1;"></span>
+          <span style="--i:2;"></span>
+          <span style="--i:3;"></span>
+          <span style="--i:4;"></span>
+          <span style="--i:5;"></span>
+          <span style="--i:6;"></span>
+          <span style="--i:7;"></span>
+          <span style="--i:8;"></span>
+          <span style="--i:9;"></span>
+          <span style="--i:10;"></span>
+          <span style="--i:11;"></span>
+          <span style="--i:12;"></span>
+          <span style="--i:13;"></span>
+          <span style="--i:14;"></span>
+          <span style="--i:15;"></span>
+          <span style="--i:16;"></span>
+          <span style="--i:17;"></span>
+          <span style="--i:18;"></span>
+          <span style="--i:19;"></span>
+          <span style="--i:20;"></span>
+        </div>
+        <div class="loader" style="--r:2;">
+          <span style="--i:1;"></span>
+          <span style="--i:2;"></span>
+          <span style="--i:3;"></span>
+          <span style="--i:4;"></span>
+          <span style="--i:5;"></span>
+          <span style="--i:6;"></span>
+          <span style="--i:7;"></span>
+          <span style="--i:8;"></span>
+          <span style="--i:9;"></span>
+          <span style="--i:10;"></span>
+          <span style="--i:11;"></span>
+          <span style="--i:12;"></span>
+          <span style="--i:13;"></span>
+          <span style="--i:14;"></span>
+          <span style="--i:15;"></span>
+          <span style="--i:16;"></span>
+          <span style="--i:17;"></span>
+          <span style="--i:18;"></span>
+          <span style="--i:19;"></span>
+          <span style="--i:20;"></span>
+        </div>
+        <div class="loader" style="--r:3;">
+          <span style="--i:1;"></span>
+          <span style="--i:2;"></span>
+          <span style="--i:3;"></span>
+          <span style="--i:4;"></span>
+          <span style="--i:5;"></span>
+          <span style="--i:6;"></span>
+          <span style="--i:7;"></span>
+          <span style="--i:8;"></span>
+          <span style="--i:9;"></span>
+          <span style="--i:10;"></span>
+          <span style="--i:11;"></span>
+          <span style="--i:12;"></span>
+          <span style="--i:13;"></span>
+          <span style="--i:14;"></span>
+          <span style="--i:15;"></span>
+          <span style="--i:16;"></span>
+          <span style="--i:17;"></span>
+          <span style="--i:18;"></span>
+          <span style="--i:19;"></span>
+          <span style="--i:20;"></span>
+        </div>
+        <div class="loader" style="--r:4;">
+          <span style="--i:1;"></span>
+          <span style="--i:2;"></span>
+          <span style="--i:3;"></span>
+          <span style="--i:4;"></span>
+          <span style="--i:5;"></span>
+          <span style="--i:6;"></span>
+          <span style="--i:7;"></span>
+          <span style="--i:8;"></span>
+          <span style="--i:9;"></span>
+          <span style="--i:10;"></span>
+          <span style="--i:11;"></span>
+          <span style="--i:12;"></span>
+          <span style="--i:13;"></span>
+          <span style="--i:14;"></span>
+          <span style="--i:15;"></span>
+          <span style="--i:16;"></span>
+          <span style="--i:17;"></span>
+          <span style="--i:18;"></span>
+          <span style="--i:19;"></span>
+          <span style="--i:20;"></span>
+        </div>
+      </section>
+      <img id="backgroundImg" src="./瑕疵完成/mask/exp1_num_3667.png" alt="Image 2">  <!-- 要連接資料庫 -->
+      <br>
+      <button id="sliderButton">TRY AGAIN</button>
+      <button id="run">RUN</button>
+      <button id="nextButton">NEXT</button>
+      <!-- 原版文字: 切換圖像 -->
+    </div>
+  </section>
+
+  <section id="fourth">
+    <div class="card_grid">
+      <a class="card" href="#">
+        <div class="card_background" style="background-image: url(./images/林子益.jpg)">
+        </div>
+        <div class="card_content">
+          <p class="card_category">隊長</p>
+          <h3 class="card_heading">林子益</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card_background" style="background-image: url(./images/羅詠潔.jpg)">
+        </div>
+        <div class="card_content">
+          <p class="card_category">隊員</p>
+          <h3 class="card_heading">羅詠潔</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card_background" style="background-image: url(./images/張庭碩.jpg)">
+        </div>
+        <div class="card_content">
+          <p class="card_category">隊員</p>
+          <h3 class="card_heading">張庭碩</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card_background" style="background-image: url(./images/陳虹希.jpg)">
+        </div>
+        <div class="card_content">
+          <p class="card_category">隊員</p>
+          <h3 class="card_heading">陳虹希</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card_background" style="background-image: url(./images/彭郁惠.jpg)">
+        </div>
+        <div class="card_content">
+          <p class="card_category">隊員</p>
+          <h3 class="card_heading">彭郁惠</h3>
+        </div>
+      </a>
+      <div>
+  </section>
+</body>
+
+<script type="text/script" src="./scripts/medic_script.js"></script>
 
