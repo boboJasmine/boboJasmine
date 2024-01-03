@@ -32,7 +32,7 @@ let imageNames1 = ["exp1_num_4727.jpg", "exp1_num_4944.jpg", "exp1_num_6984.jpg"
     "exp6_num_291134.jpg", "exp6_num_297601.jpg", "exp6_num_308130.jpg", "exp6_num_317592.jpg",
     "exp6_num_322697.jpg", "exp6_num_328105.jpg", "exp6_num_346414.jpg"];
 
-let imageNames2 = ["exp1_num_3667.png", "exp1_num_4727.png", "exp1_num_4944.png", "exp1_num_6984.png",
+let imageNames2 = ["exp1_num_4727.png", "exp1_num_4944.png", "exp1_num_6984.png", "exp1_num_3667.png", 
     "exp1_num_9473.png", "exp1_num_36290.png", "exp1_num_40410.png", "exp1_num_51674.png",
     "exp1_num_54246.png", "exp1_num_108719.png", "exp1_num_108889.png", "exp1_num_262480.png",
     "exp1_num_265077.png", "exp1_num_290998.png", "exp1_num_297464.png", "exp1_num_308015.png",
