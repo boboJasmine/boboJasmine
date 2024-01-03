@@ -2,7 +2,7 @@ const changeImage = document.getElementById("sliderButton");
 const image1 = document.getElementById("foregroundImg");
 const image2 = document.getElementById("backgroundImg");
 
-let imageNames1 = ["exp1_num_3667.jpg", "exp1_num_4727.jpg", "exp1_num_4944.jpg", "exp1_num_6984.jpg",
+let imageNames1 = ["exp1_num_4727.jpg", "exp1_num_4944.jpg", "exp1_num_6984.jpg", "exp1_num_3667.jpg", 
     "exp1_num_9473.jpg", "exp1_num_36290.jpg", "exp1_num_40410.jpg", "exp1_num_51674.jpg",
     "exp1_num_54246.jpg", "exp1_num_108719.jpg", "exp1_num_108889.jpg", "exp1_num_262480.jpg",
     "exp1_num_265077.jpg", "exp1_num_290998.jpg", "exp1_num_297464.jpg", "exp1_num_308015.jpg",
